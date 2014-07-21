@@ -306,7 +306,7 @@ void initOpenCL
      */
     const char* fileName = env->GetStringUTFChars(kernelName, 0);
     std::string fileDir;
-    fileDir.append("/data/data/com.example.simpleopencl/app_execdir/");
+    fileDir.append("/data/data/com.example.inversefilter/app_execdir/");
     fileDir.append(fileName);
     fileDir.append(".cl");
     std::string kernelSource = loadProgram(fileDir);
@@ -408,7 +408,7 @@ void initOpenCL
 }
 
 
-extern "C" void Java_com_example_InverseFilter_MainActivity_initOpenCL
+extern "C" void Java_com_example_inversefilter_MainActivity_initOpenCL
 (
     JNIEnv* env,
     jobject thisObject,
@@ -471,7 +471,7 @@ void shutdownOpenCL (OpenCLObjects& openCLObjects)
 }
 
 
-extern "C" void Java_com_example_InverseFilter_MainActivity_shutdownOpenCL
+extern "C" void Java_com_example_inversefilter_MainActivity_shutdownOpenCL
 (
     JNIEnv* env,
     jobject thisObject
@@ -721,7 +721,7 @@ void nativeInverseOpenCL
     LOGD("nativeInverseOpenCL ends successfully");
 }
 
-extern "C" void Java_com_example_InverseFilter_MainActivity_nativeInverseOpenCL
+extern "C" void Java_com_example_inversefilter_MainActivity_nativeInverseOpenCL
 (
     JNIEnv* env,
     jobject thisObject,
